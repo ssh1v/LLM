@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.db
+.env.local
+.pytest_cache/
+.ruff_cache/
+requirements.txt
+
+# environment variables / secrets
+.env
+*.env
+auth_service/.env
+bot_service/.env
+
+# virtual environments
+.venv/
+venv/
+
+# pytest cache
+.pytest_cache/
+
+# python cache
+__pycache__/
+*.pyc
