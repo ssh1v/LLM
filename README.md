@@ -143,11 +143,9 @@ cd bot_service && uv run pytest -v
 
 ## Демонстрация работы
 
-- `telegram_example.png` — сценарий в Telegram: `/token` → подтверждение →
-  обычный вопрос → «Запрос принят» → ответ от LLM. Подтверждает, что доступ
-  защищён JWT и запрос к LLM идёт не напрямую.
-  <img width="1280" height="909" alt="telegram-cloud-photo-size-2-5260489216049748611-y" src="https://github.com/user-attachments/assets/97b0abd8-3315-4e89-9714-9a685859ec85" />
+- `telegram_example.png`
+<img width="1280" height="909" alt="telegram-cloud-photo-size-2-5260489216049748611-y" src="https://github.com/user-attachments/assets/97b0abd8-3315-4e89-9714-9a685859ec85" />
 
-- `rabbitmq_overview.png` — интерфейс RabbitMQ: активные очереди, подключения и
-  consumers (Connections: 4, Queues: 3, Consumers: 3). Подтверждает, что задачи
-  реально проходят через брокер и обрабатываются асинхронно.
+- `rabbitmq_overview.png` — интерфейс RabbitMQ: 
+  <img width="1488" height="733" alt="image" src="https://github.com/user-attachments/assets/107b79d5-ccbd-4d22-9621-b50297ccf069" />
+
