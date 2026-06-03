@@ -117,17 +117,22 @@ celery -A app.infra.celery_app:celery_app worker --loglevel=info  # воркер
 
 ## Тесты
 
-Тесты не требуют Docker, реального Redis/RabbitMQ или доступа в интернет:
-используются in-memory SQLite, `fakeredis`, `pytest-mock` и `respx`.
-
 ```bash
 cd auth_service && uv run pytest -v
+<img width="1280" height="344" alt="telegram-cloud-photo-size-2-5260489216049748557-y" src="https://github.com/user-attachments/assets/11454bdf-6946-4ecc-b663-8be7c7c31add" />
+
 cd bot_service && uv run pytest -v
+<img width="1280" height="319" alt="telegram-cloud-photo-size-2-5260489216049748559-y" src="https://github.com/user-attachments/assets/2df9eee8-1492-4e90-9e98-fcbf203bb85e" />
+
 ```
 
 **Auth Service**
 - `test_security.py` — unit: хеширование/проверка пароля, генерация и декодирование JWT.
 - `test_auth_api.py` — integration через `httpx.ASGITransport`
+<img width="1280" height="542" alt="telegram-cloud-photo-size-2-5260489216049748607-y" src="https://github.com/user-attachments/assets/124cd196-ff3c-4cff-920f-cda298fb85e6" />
+<img width="1280" height="480" alt="telegram-cloud-photo-size-2-5260489216049748608-y" src="https://github.com/user-attachments/assets/e1d537f5-dba7-43c6-aaf0-b35596f71ce9" />
+<img width="1280" height="530" alt="telegram-cloud-photo-size-2-5260489216049748609-y" src="https://github.com/user-attachments/assets/5f8d1804-d5b6-4079-bffb-a8b4a49a94c5" />
+
 
 **Bot Service**
 - `test_jwt.py` — unit: валидный токен декодируется, мусор вызывает ошибку.
@@ -138,11 +143,11 @@ cd bot_service && uv run pytest -v
 
 ## Демонстрация работы
 
-Скриншоты в `docs/screenshots/`:
-
 - `telegram_example.png` — сценарий в Telegram: `/token` → подтверждение →
   обычный вопрос → «Запрос принят» → ответ от LLM. Подтверждает, что доступ
   защищён JWT и запрос к LLM идёт не напрямую.
+  <img width="1280" height="909" alt="telegram-cloud-photo-size-2-5260489216049748611-y" src="https://github.com/user-attachments/assets/97b0abd8-3315-4e89-9714-9a685859ec85" />
+
 - `rabbitmq_overview.png` — интерфейс RabbitMQ: активные очереди, подключения и
   consumers (Connections: 4, Queues: 3, Consumers: 3). Подтверждает, что задачи
   реально проходят через брокер и обрабатываются асинхронно.
